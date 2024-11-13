@@ -1,17 +1,41 @@
+.bg-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:100vh;
+    width:100vw;
+    background-color: rgb(169, 249, 232);
+    background-size: cover;
+
+}
 .home-bg-container{
     display:flex;
     flex-direction:column;
-    align-items: center;
+    align-items:center;
     height:100vh;
+    text-align: center;
     background-color: rgb(169, 249, 232);
     background-size: cover;
-    text-align: center;
     
 } 
 .heading{
     color:rgb(140, 51, 218);
 }
 
+
+
+.profile-container{
+    align-self: flex-start;
+    margin-left:8px;
+    color:#000000;
+    
+
+    
+}
+
+.Profile-img{
+    height:100px;
+}
 .todo-items-container{
     display: flex;
     flex-direction: row;
@@ -45,9 +69,52 @@
     border-width:0px;
     border-radius: 5px;
     color:#ffffff;
+    margin:5px;
    
 }
 
 .todo{
     font-size:20px;
+}
+
+.btns-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.logout-btn-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: blue;
+    padding:10px;
+    border-width:0px;
+    border-radius: 5px;
+    color:#ffffff;
+    margin:5px;
+
+}
+
+.logout-btn{
+    background-color: transparent;
+    color:#ffffff;
+    
+    border-width: 0px;
+}
+
+.profile-logout-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:#000000;
+
+}
+.btn{
+    background-color: transparent;
+    color:#000000;
+    
+    border-width: 0px;
+
 }

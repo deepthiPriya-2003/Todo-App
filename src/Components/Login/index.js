@@ -1,5 +1,6 @@
 import {Component} from "react" 
-import {Link, redirect, Navigate} from "react-router-dom";
+import {Link, redirect, Navigate} from "react-router-dom"; 
+import Cookies from 'js-cookie' 
 import "./index.css" 
 
 class Login extends Component { 
@@ -16,8 +17,9 @@ class Login extends Component {
         
 
     } 
-    onSubmitSuccess=(msg)=>{
-        //const navigate = Navigate()
+    onSubmitSuccess=(username, password)=>{
+       Cookies.set("password", password, {expires: 30})
+        Cookies.set("userName", username, {expires: 30})
         this.setState({isErr:false, isLoggedIn:true}) 
         
         
@@ -32,8 +34,9 @@ class Login extends Component {
         
         const isNameValid = userName.length > 0 
         const isPasswordValid = password.length >= 5 
-        if (isNameValid && isPasswordValid){
-            this.onSubmitSuccess() 
+        
+        if (isNameValid && isPasswordValid){ 
+            this.onSubmitSuccess(userName, password) 
           
         }
         else{
@@ -46,7 +49,7 @@ class Login extends Component {
       const {userName, password, isErr, isLoggedIn} = this.state
         // console.log(password.length) 
          if (isLoggedIn === true){
-            return <Navigate to="/home" />
+            return <Navigate to="/" />
          }
         return (
             <div className="login-container">

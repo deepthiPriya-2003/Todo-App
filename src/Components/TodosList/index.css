@@ -1,0 +1,39 @@
+.todo-items-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(172, 90, 244);
+    border-radius:10px;
+    width:600px;
+    margin:8px;
+    color: #ffffff;
+
+
+}
+
+.input-field{
+    height:25px;
+    width:25px;
+    
+}
+
+.todo{
+    font-size:20px;
+}
+
+.todo-input{
+    font-size:20px;
+    background-color: rgb(172, 90, 244);
+    color:#ffffff;
+    border-width:0px;
+    padding:10px;
+    border:none;
+    outline:none; 
+
+}
+
+input::placeholder{
+    color:#000000;
+
+}
